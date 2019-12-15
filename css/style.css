@@ -1,0 +1,23 @@
+#image{
+    width: 100%;
+    height: 500px;
+    margin-top: -53px;
+}
+#p{
+    font-size: 60px;
+    margin-left: 18%;
+    margin-top: -13%;
+}
+.Modalrolue{
+    border-left: 2px solid rgb(17, 16, 16);
+    height: 44%;
+    position: absolute;
+    left: 50%;
+}
+#text{
+    font-size: 25px;
+}
+#step{
+    margin-left: 51%;
+    margin-top: -25%;
+}

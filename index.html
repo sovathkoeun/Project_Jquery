@@ -1,44 +1,91 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Project </title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>jQuery Project</title>
 </head>
+
 <body>
     <div class="container">
-            <img src="image/colate.jpg" alt="calate" style="height: 400px; width: 100%;">
-            <br>
-            <br>
-            <br>
+        <img id="image" src="image/food.png" alt="food">
+        <b><p id="p">Food for everyone</p></b>
+        <br>
+        <br>
+        <br>
         <div class="row">
-            <div class="col-4"></div>         
+            <div class="col-4"></div>
             <div class="col-4">
-                <select id="choose_me_baby" class="form-control">
-                    <option value="" disabled selected>Choose Recipe</option>
-                    <option value="0">Nom Pom</option>
-                    <option value="1">Chocolate cake</option>
-                    <option value="2">Avocado Shake (Toek KaLok</option>
-                </select>
+                <!-- Choose list Recipes -->
+                <form action="#">
+                    <div class="form-group">
+                        <select id="choose" class="form-control">
+                            <option disabled selected>Choose Recipe</option>
+                        </select>
+                    </div>
+                    <hr>
+                </form>
             </div>
             <div class="col-4"></div>
         </div>
     </div>
     <div class="container mt-5">
-        <div class="row">
-            <div class="col-12">
-                <div class="card">
-                    <div class="card-body">
-                        <table class="table table-borderless" id="result"></table>
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-12">
+                        <table class="table table-borderless" id="result">
+                        </table>
                     </div>
                 </div>
+                <div class="row mt-5" id="hide">
+                    <!-- <div class="col-4"></div> -->
+                    <div class="col-3"></div>
+                    <div class="col-3" id="text">Number of persons</div>
+                    <div class="col-3">
+                    <!-- <div class="col-4"></div> -->
+                        <div class="input-group mb-3">
+                                <!-- calutate number -->
+                            <div class="input-group-append">
+                                <button class="btn btn-success" id="donw"> - </button>
+                            </div>
+                            <input type="text" id="getInput" class="form-control text-center" disabled value="1">
+                            <div class="input-group-append">
+                                <button class="btn btn-success" id="up"> + </button>
+                            </div>
+                              <!-- calutate number close -->
+                        </div>
+                    </div>
+                    <div class="col-3"></div>
+                </div>
+
+                <div class="row mt-5">
+                    <div class="col-5">
+                        <h4 class="text-center" id="Ingredients"></h4>
+                        <table class="table table-borderless" id="output"> </table>                   
+                    </div>
+                    <div class="col-2 text-center Modalrolue" id="modalhide"></div>
+                    <div class="col-5">
+                        <h4 class="text-center" id="Instructions"></h4>
+                    </div>
+                </div>  
+                <br>
+                <br>
+                <br>
+                <br>
+                <div class="row">
+                     <div class="col-6" id="step"></div>
+                 </div>
             </div>
         </div>
     </div>
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="js/project.js"></script>
 </body>
+
 </html>
