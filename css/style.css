@@ -1,23 +1,34 @@
+body{
+    background-image: url('../image/food.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 10px solid white;
+}
 #image{
     width: 100%;
-    height: 500px;
-    margin-top: -53px;
+    height: 410px;
+    border-radius: 1%;
+    border: 20px solid rgb(221, 175, 23);
+    padding: 10px;
 }
 #p{
     font-size: 60px;
-    margin-left: 18%;
-    margin-top: -13%;
+    margin-left: 30%;
+    margin-top: -19%;
+    color:rgb(80, 68, 245);
+    opacity: 0.8;
 }
 .Modalrolue{
-    border-left: 2px solid rgb(17, 16, 16);
     height: 44%;
     position: absolute;
+    border-left: 2px solid rgb(17, 16, 16); 
     left: 50%;
 }
 #text{
     font-size: 25px;
 }
 #step{
-    margin-left: 51%;
-    margin-top: -25%;
+    margin-left: 25%;
+    padding: 20px;
+    font-family: 30px;
 }
