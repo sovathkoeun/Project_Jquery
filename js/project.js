@@ -1,19 +1,19 @@
 $(document).ready(function () {
-    //hide input calulate
+    // hide input calulate
     $('#hide').hide();
-    //hide modal line
+    // hide modal line
     $('#modalhide').hide();
-    //requerst name of element from api
+    // requerst name of element from api
     requerstApi();
     var url = "https://raw.githubusercontent.com/radytrainer/test-api/master/test.json";
     $('#choose').on('change', function () {
-        //show input calulate
+        // show input calulate
         $('#hide').show();
         // show Modal line
         $('#modalhide').show();
-        //Instructions
+        // Instructions
         $('#Instructions').html('Instructions');
-        //Ingredients 
+        // Ingredients 
         $('#Ingredients').html('Ingredients');
         $.ajax({
             dataType: 'json',
@@ -32,7 +32,6 @@ $(document).ready(function () {
                         getStep(ele.instructions);
                         // get  from function
                         eachQuanlitie = ele.ingredients;
-
                         result += `
                     <div class="row">
                         <div class="col-2"></div>
@@ -46,13 +45,13 @@ $(document).ready(function () {
                         <div class="col-3"></div>
                     </div>
                     `;
-                        // get data from on ele and use forEach under
+                        // get data from on ele and use forEach on
                         ele.ingredients.forEach(item => {
                             output += `
                              <tr>
                                 <td><img src="${item.iconUrl}" width="90" style="border-radius:5px"></td>
                                 <td>${item.quantity}</td>
-                                <td>${(item.unit[0]).toLowerCase()}</td>
+                                <td>${(item.unit[0])}</td>
                                 <td>${item.name}</td>
                             </tr>
                              `;
@@ -66,6 +65,7 @@ $(document).ready(function () {
         });
     });
 });
+
 //get url
 function getUrl() {
     var url = "https://raw.githubusercontent.com/radytrainer/test-api/master/test.json";
@@ -81,6 +81,7 @@ function requerstApi() {
         error: () => console.log('error'),
     })
 }
+
 // get data for list choose option
 function chooseRecipe(recipe) {
     var option = "";
@@ -112,6 +113,7 @@ $('#Adds').on('click', function () {
     var caculate = $('#caculate').val();
     Add(caculate);
 });
+
 // function for  click  Substract
 $('#substract').on('click', function () {
     var caculate = $('#caculate').val();
@@ -126,6 +128,7 @@ function Add(Adds) {
         getGuests(getAdd);
     }
 }
+
 // function for caculator substract
 function Subtract(substract) {
     var getSubstract = parseInt(substract) - 1;
@@ -144,22 +147,23 @@ var eachQuanlitie = [];
 function getGuests(newGuest) {
     var device;
     var nbQuanlity;
-    var display = "";
+    var result = "";
     eachQuanlitie.forEach(element => {
         var { quantity, iconUrl, name, unit } = element;
         device = quantity / oldGuest;
         nbQuanlity = device * newGuest;
-        display += `
+        result += `
         <tr>
             <td><img src="${iconUrl}" width="90"></td>
             <td id='quantity'>${ nbQuanlity}</td>
-            <td>${(unit[0]).toLowerCase()}</td>
+            <td>${(unit[0])}</td>
             <td>${name}</td>
         </tr>
     `;
     });
-    $("#output").html(display);
+    $("#output").html(result);
 }
+
 // desplay result
 function getOldguest(oldGest) {
     $('#caculate').val(oldGest);
