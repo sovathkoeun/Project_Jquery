@@ -2,19 +2,25 @@ body{
     background-image: url('../image/food.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    border: 10px solid white;
+    border: 10px solid rgb(170, 189, 179);
 }
+.card-body {
+    background: rgb(230, 236, 233);
+    border: 20px solid rgb(170, 189, 179);
+}
+/* 14, 194, 95 */
 #image{
     width: 100%;
     height: 410px;
     border-radius: 1%;
-    border: 20px solid orange;
+    border: 20px solid rgb(170, 189, 179);
 }
+
 #p{
     font-size: 60px;
     margin-left: 30%;
     margin-top: -17%;
-    color:rgb(80, 68, 245);
+    color:rgb(216, 215, 233);
     opacity: 0.8;
 }
 .Modalrolue{

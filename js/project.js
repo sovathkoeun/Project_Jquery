@@ -1,11 +1,11 @@
 $(document).ready(function () {
+    var url = "https://raw.githubusercontent.com/radytrainer/test-api/master/test.json";
     // hide input calulate
     $('#hide').hide();
     // hide modal line
     $('#modalhide').hide();
     // requerst name of element from api
     requerstApi();
-    var url = "https://raw.githubusercontent.com/radytrainer/test-api/master/test.json";
     $('#choose').on('change', function () {
         // show input calulate
         $('#hide').show();
@@ -99,7 +99,7 @@ function getStep(item) {
     var step = item.split("<step>");
     for (let i = 1; i < step.length; i++) {
         instruction += `
-            <h4 class="text-primary">step${i}:</h4>
+            <h4 class="text-primary">step${i}</h4>
              ${step[i]}
         `;
     }
@@ -139,7 +139,6 @@ function Subtract(substract) {
 }
 
 // calulate new quantity when user click 
-
 // use oldGest 
 var oldGuest;
 // declear variable array
@@ -155,7 +154,7 @@ function getGuests(newGuest) {
         result += `
         <tr>
             <td><img src="${iconUrl}" width="90"></td>
-            <td id='quantity'>${ nbQuanlity}</td>
+            <td id='quantity'>${nbQuanlity}</td>
             <td>${(unit[0])}</td>
             <td>${name}</td>
         </tr>
